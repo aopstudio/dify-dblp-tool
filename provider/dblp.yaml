@@ -1,0 +1,21 @@
+identity:
+  author: aopstudio
+  name: dblp
+  label:
+    en_US: DBLP
+    zh_Hans: DBLP
+    pt_BR: DBLP
+  description:
+    en_US: DBLP search
+    zh_Hans: DBLP 搜索
+    pt_BR: DBLP search
+  icon: icon.svg
+  tags:
+    - search
+tools:
+  - tools/dblp_publ_search.yaml
+  - tools/dblp_author_search.yaml
+  - tools/dblp_venue_search.yaml
+extra:
+  python:
+    source: provider/dblp.py

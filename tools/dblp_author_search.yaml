@@ -1,0 +1,61 @@
+identity:
+  name: dblp_author_search
+  author: aopstudio
+  label:
+    en_US: DBLP author search
+    zh_Hans: DBLP 作者搜索
+    pt_BR: DBLP author search
+
+description:
+  human:
+    en_US: A tool for searching authors from the dblp API.
+    zh_Hans: 一个用于通过 dblp API 搜索作者信息的工具。
+    pt_BR: A tool for searching authors from the dblp API.
+  llm: A tool for querying authors using the dblp search API.
+
+parameters:
+  - name: q
+    type: string
+    required: true
+    label:
+      en_US: Query string
+      zh_Hans: 查询关键词
+      pt_BR: Query string
+    human_description:
+      en_US: The search query string used to look up authors.
+      zh_Hans: 用于搜索作者的查询字符串。
+      pt_BR: The search query string used to look up authors.
+    llm_description: The keywords for searching authors on dblp.
+    form: llm
+
+  - name: h
+    type: number
+    required: false
+    label:
+      en_US: Max hits
+      zh_Hans: 最大返回结果数
+      pt_BR: Max hits
+    human_description:
+      en_US: Maximum number of results (hits) to return. Defaults to 30 if not specified.
+      zh_Hans: 控制返回结果的最大数量，若未指定则默认为 30。
+      pt_BR: Maximum number of results (hits) to return. Defaults to 30 if not specified.
+    llm_description: Maximum number of results to fetch from dblp (default 30).
+    form: llm
+
+  - name: f
+    type: number
+    required: false
+    label:
+      en_US: Start offset
+      zh_Hans: 起始结果编号
+      pt_BR: Start offset
+    human_description:
+      en_US: Index of the first result to return (used for pagination). Defaults to 0.
+      zh_Hans: 设置从第几个结果开始返回，用于分页。默认为 0。
+      pt_BR: Index of the first result to return (used for pagination). Defaults to 0.
+    llm_description: Starting offset for paginated results (default 0).
+    form: llm
+
+extra:
+  python:
+    source: tools/dblp_author_search.py
