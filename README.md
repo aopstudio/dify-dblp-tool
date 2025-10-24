@@ -88,3 +88,6 @@ Returns top 10 venues matching “NeurIPS”.
 
 * DBLP data is open and publicly accessible under CC0 license.
 * Pagination is supported via the `f` parameter.
+
+## Repository URL
+https://github.com/aopstudio/dify-dblp-tool
